@@ -16,12 +16,16 @@ class DebugExtension extends Extension
 	
 	protected function autoload( $class )
 	{
-	
+		$files = array(
+			"DebugExtensionHooks" => "DebugExtensionHooks.php",
+		);
+		
+		return $files[$class];
 	}
 	
 	protected function registerHooks()
 	{
-	
+		Hooks::register( "BuildPageSearchPaths", array("DebugExtensionHooks","buildPageSearchPaths"));
 	}
 	
 

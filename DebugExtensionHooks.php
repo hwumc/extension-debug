@@ -6,7 +6,8 @@ class DebugExtensionHooks
 {
 	public static function buildPageSearchPaths($args)
 	{
-		$args[0][] = dirname(__FILE__) . "/Page/";
-		return $args;
+        $paths = $args[0];
+        $paths[] = dirname(__FILE__) . "/Page/";
+		return $paths;
 	}
 }

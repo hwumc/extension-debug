@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>extension-debug</Name>
+    <ProjectGuid>{47f0687a-086c-4d0c-99a0-7a3bc0239f73}</ProjectGuid>
+    <RootNamespace>extension-debug</RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <IISProjectUrl>http://localhost:48143/</IISProjectUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include=".gitignore" />
+    <Compile Include="application.log" />
+    <Compile Include="DebugExtension.php" />
+    <Compile Include="DebugExtensionHooks.php" />
+    <Compile Include="Page\PageDbgAccessDenied.php" />
+    <Compile Include="Page\PageDbgAllPageList.php" />
+    <Compile Include="Page\PageDbgAllRightList.php" />
+    <Compile Include="Page\PageDbgGroupList.php" />
+    <Compile Include="Page\PageDbgPageList.php" />
+    <Compile Include="Page\PageDbgRightList.php" />
+    <Compile Include="Page\PageDbgSudo.php" />
+    <Compile Include="Page\PageDbgThrowException.php" />
+    <Compile Include="Page\PagePhpInfo.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Page" />
+  </ItemGroup>
+</Project>

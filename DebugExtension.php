@@ -20,7 +20,7 @@ class DebugExtension extends Extension
 			"DebugExtensionHooks" => "DebugExtensionHooks.php",
 		);
 		
-		return $files[$class];
+		return array_key_exists($class, $files) ? $files[$class] : null;
 	}
 	
 	protected function registerHooks()

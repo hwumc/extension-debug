@@ -28,8 +28,14 @@
   <ItemGroup>
     <Compile Include=".gitignore" />
     <Compile Include="application.log" />
+    <Compile Include="DataObjects\DbReport.php">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DebugExtension.php" />
     <Compile Include="DebugExtensionHooks.php" />
+    <Compile Include="Page\PageDatabaseReports.php">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Page\PageDbgSmartyTemplates.php">
       <SubType>Code</SubType>
     </Compile>
@@ -44,6 +50,26 @@
     <Compile Include="Page\PagePhpInfo.php" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DataObjects" />
+    <Folder Include="Templates" />
     <Folder Include="Page" />
+    <Folder Include="Templates\dbreports" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\dbreports\disabled.tpl">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Templates\dbreports\result.tpl">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Templates\dbreports\create.tpl">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Templates\dbreports\delete.tpl">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Templates\dbreports\reportlist.tpl">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
 </Project>

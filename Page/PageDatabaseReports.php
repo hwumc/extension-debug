@@ -169,9 +169,9 @@ class PageDatabaseReports extends PageBase
         
         self::checkAccess( $g->getAccessRight() );
         
-        global $gDatabase;
+        global $gReadOnlyDatabase;
         
-        $statement = $gDatabase->prepare( $g->getQuery() );
+        $statement = $gReadOnlyDatabase->prepare( $g->getQuery() );
         $statement->execute();
         
         $resultset = $statement->fetchAll( PDO::FETCH_ASSOC );

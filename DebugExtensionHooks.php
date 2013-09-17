@@ -10,4 +10,13 @@ class DebugExtensionHooks
         $paths[] = dirname(__FILE__) . "/Page/";
 		return $paths;
 	}
+    
+    public static function smartySetup($args)
+    {
+        $smarty = $args[0];
+        
+        $smarty->addTemplateDir(dirname(__FILE__) . "/Templates/");
+        
+        return $smarty;
+    }
 }

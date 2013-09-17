@@ -18,14 +18,16 @@ class DebugExtension extends Extension
 	{
 		$files = array(
 			"DebugExtensionHooks" => "DebugExtensionHooks.php",
+			"DbReport" => "DataObjects/DbReport.php",
 		);
 		
 		return array_key_exists($class, $files) ? $files[$class] : null;
 	}
-	
+    	
 	protected function registerHooks()
 	{
 		Hooks::register( "BuildPageSearchPaths", array("DebugExtensionHooks","buildPageSearchPaths"));
+        Hooks::register( "PostSetupSmarty", array("DebugExtensionHooks","smartySetup"));
 	}
 	
 

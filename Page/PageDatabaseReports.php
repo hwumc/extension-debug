@@ -15,11 +15,20 @@ class PageDatabaseReports extends PageBase
 
 	protected function runPage()
 	{
+        global $cAllowUserSqlQueries;
+        
 		$data = explode( "/", WebRequest::pathInfoExtension() );
 		if( isset( $data[0] ) ) {
 			switch( $data[0] ) {
 				case "edit":
-					$this->editMode( $data );
+                    if( $cAllowSqlQueries || User::getLoggedIn()->isGod() ) 
+                    {
+					    $this->editMode( $data );
+                    }
+                    else
+                    {
+                        $this->mBasePage = "dbreports/disabled.tpl";
+                    }
 					return;
 					break;
 				case "execute":
@@ -27,11 +36,25 @@ class PageDatabaseReports extends PageBase
 					return;
 					break;
 				case "delete":
-					$this->deleteMode( $data );
+                    if( $cAllowSqlQueries || User::getLoggedIn()->isGod() ) 
+                    {
+					    $this->deleteMode( $data );
+                    }
+                    else
+                    {
+                        $this->mBasePage = "dbreports/disabled.tpl";
+                    }
 					return;
 					break;
 				case "create":
-					$this->createMode( $data );
+					if( $cAllowSqlQueries || User::getLoggedIn()->isGod() ) 
+                    {
+					    $this->createMode( $data );
+                    }
+                    else
+                    {
+                        $this->mBasePage = "dbreports/disabled.tpl";
+                    }
 					return;
 					break;
 			}

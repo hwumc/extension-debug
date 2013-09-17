@@ -1,6 +1,6 @@
 {extends file="base.tpl"}
 {block name="pagedescription"}
-	{if $allowEdit == "true"}
+	{if $allowEdit == "true" || $allowCreate == "true" }
 		<div class="alert alert-block alert-danger"><h4>{message name="{$pageslug}-alert-title"}</h4>{message name="{$pageslug}-alert-body"}</div>
 	{/if}
 {/block}

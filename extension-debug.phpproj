@@ -33,6 +33,9 @@
     </Compile>
     <Compile Include="DebugExtension.php" />
     <Compile Include="DebugExtensionHooks.php" />
+    <Compile Include="Page\PageErrorLogViewer.php">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Page\PageDatabaseReports.php">
       <SubType>Code</SubType>
     </Compile>

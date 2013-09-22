@@ -27,7 +27,7 @@ class PageDbgSudo extends PageBase
             $usernames = array();
             foreach (User::getArray() as $k => $v)
             {
-                $usernames[] = "\"" . $v->getUsername() . "\"";
+                $usernames[] = "\"" . htmlentities($v->getUsername()) . "\"";
             }  
             
             $this->mSmarty->assign("jsuserlist", "[" . implode(",", $usernames ) . "]" );

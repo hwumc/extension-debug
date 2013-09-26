@@ -24,7 +24,7 @@
 					<tr>
 						<th>{$page->getTitle()|escape}</th>
 						<td>{$page->getAccessRight()|escape}</td>
-						<td>{if $loggedInUser->isAllowed( $page->getAccessRight() )}<a href="{$cScriptPath}/{$pageslug}/execute/{$pageid}" class="btn btn-small btn-info">{message name="{$pageslug}-button-execute"}</a>{/if}</td>
+						<td>{if $currentUser->isAllowed( $page->getAccessRight() )}<a href="{$cScriptPath}/{$pageslug}/execute/{$pageid}" class="btn btn-small btn-info">{message name="{$pageslug}-button-execute"}</a>{/if}</td>
 						{if $allowEdit == "true"}<td><a href="{$cScriptPath}/{$pageslug}/edit/{$pageid}" class="btn btn-small">{message name="{$pageslug}-button-edit"}</a></td>{/if}
 						{if $allowDelete == "true"}<td><a href="{$cScriptPath}/{$pageslug}/delete/{$pageid}" class="btn btn-small btn-danger">{message name="{$pageslug}-button-delete"}</a></td>{/if}
 					</tr>

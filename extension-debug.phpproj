@@ -57,6 +57,7 @@
     <Folder Include="Templates" />
     <Folder Include="Page" />
     <Folder Include="Templates\dbreports" />
+    <Folder Include="Templates\diagnostics" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Templates\dbreports\disabled.tpl">
@@ -72,6 +73,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Templates\dbreports\reportlist.tpl">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Templates\diagnostics\errorlog.tpl">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

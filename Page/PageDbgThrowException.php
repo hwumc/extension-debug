@@ -6,7 +6,7 @@ class PageDbgThrowException extends PageBase
 {
 	public function __construct() {
 		$this->mPageUseRight = "diagnostic-badbehaviour";
-		$this->mMenuGroup = "BadBehaviour";
+        $this->mIsSpecialPage = true;
 		$this->mBasePage = "blank.tpl";
 	}
 

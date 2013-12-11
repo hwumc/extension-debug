@@ -6,7 +6,7 @@ class PageErrorLogViewer extends PageBase
 {
 	public function __construct() {
 		$this->mPageUseRight = "diagnostic-errorlog";
-		$this->mMenuGroup = "Diagnostics";
+        $this->mIsSpecialPage = true;
 	}
 
 	protected function runPage() 

@@ -6,7 +6,7 @@ class PageDbgAllRightList extends PageBase
 {
 	public function __construct() {
 		$this->mPageUseRight = "diagnostic";
-		$this->mMenuGroup = "Diagnostics";
+        $this->mIsSpecialPage = true;
 	}
 
 	protected function runPage() {

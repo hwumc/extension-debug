@@ -6,8 +6,8 @@ class PageDbgAccessDenied extends PageBase
 {
 	public function __construct() {
 		$this->mPageUseRight = "diagnostic-badbehaviour";
-		$this->mMenuGroup = "BadBehaviour";
 		$this->mBasePage = "blank.tpl";
+        $this->mIsSpecialPage = true;
 	}
 
 	protected function runPage() {

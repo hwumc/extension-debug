@@ -28,6 +28,7 @@ class DebugExtension extends Extension
 	{
 		Hooks::register( "BuildPageSearchPaths", array("DebugExtensionHooks","buildPageSearchPaths"));
         Hooks::register( "PostSetupSmarty", array("DebugExtensionHooks","smartySetup"));
+        Hooks::register( "PreCreateNavBarMenu", array("DebugExtensionHooks","addNavBarMenuItems"));
 	}
 	
 

@@ -131,6 +131,12 @@ class DebugExtensionHooks
                 "icon" => "icon-folder-open"
                 );
             
+            $menu['debugging']['smarty']['clean'] = array(
+                "displayname" => "page-dbgsmartyclean",
+                "link" => $cScriptPath . "/DbgSmartyClean",
+                "icon" => "icon-folder-open"
+                );
+            
             $menu['debugging']['info']['phpinfo'] = array(
                 "displayname" => "page-phpinfo",
                 "link" => $cScriptPath . "/PhpInfo",

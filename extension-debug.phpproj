@@ -33,6 +33,7 @@
     </Compile>
     <Compile Include="DebugExtension.php" />
     <Compile Include="DebugExtensionHooks.php" />
+    <Compile Include="Page\PageDbgSmartyClean.php" />
     <Compile Include="Page\PageErrorLogViewer.php">
       <SubType>Code</SubType>
     </Compile>
@@ -78,5 +79,6 @@
     <Content Include="Templates\diagnostics\errorlog.tpl">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Templates\diagnostics\smartyclean.tpl" />
   </ItemGroup>
 </Project>

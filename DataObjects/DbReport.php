@@ -44,7 +44,7 @@ class DbReport extends DataObject
 
         if($this->isNew)
         { // insert
-            $statement = $gDatabase->prepare("INSERT INTO dbreport VALUES (null, :title, :accessright, :query );");
+            $statement = $gDatabase->prepare("INSERT INTO dbreport (title, accessright, query) VALUES (:title, :accessright, :query );");
             $statement->bindParam(":title", $this->title);
             $statement->bindParam(":accessright", $this->accessright);
             $statement->bindParam(":query", $this->query);;

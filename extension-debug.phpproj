@@ -33,6 +33,7 @@
     <Compile Include="DebugExtension.php" />
     <Compile Include="DebugExtensionHooks.php" />
     <Compile Include="Page\PageDbgSmartyClean.php" />
+    <Compile Include="Page\PageDbgTriggerSessionError.php" />
     <Compile Include="Page\PageErrorLogViewer.php">
       <SubType>Code</SubType>
     </Compile>

@@ -71,6 +71,12 @@ class DebugExtensionHooks
                 "link" => $cScriptPath . "/DbgAccessDenied",
                 "icon" => "icon-fire"
                 );
+            
+            $menu['debugging']['badbehaviour']['triggersessionerror'] = array(
+                "displayname" => "page-dbgtriggersessionerror",
+                "link" => $cScriptPath . "/DbgTriggerSessionError",
+                "icon" => "icon-fire"
+                );
         }
         
         if( $currentUser->isAllowed("diagnostic") )

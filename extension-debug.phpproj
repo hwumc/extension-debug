@@ -27,7 +27,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include=".gitignore" />
-    <Compile Include="application.log" />
     <Compile Include="DataObjects\DbReport.php">
       <SubType>Code</SubType>
     </Compile>

@@ -21,6 +21,7 @@ class PageDbgSudo extends PageBase
             
             global $cScriptPath;
             $this->mHeaders[] = "Location: " . $cScriptPath;
+            $this->mIsRedirecting = true;
         } else {
             $this->mBasePage = "webmaster/sudo.tpl";
             

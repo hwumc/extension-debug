@@ -30,6 +30,7 @@ class PageErrorLogViewer extends PageBase
             }
             
             $this->mHeaders[] = "Location: " . $cScriptPath . "/ErrorLogViewer";
+            $this->mIsRedirecting = true;
             return;
         }
         

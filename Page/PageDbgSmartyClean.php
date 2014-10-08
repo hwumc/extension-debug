@@ -39,6 +39,7 @@ class PageDbgSmartyClean extends PageBase
             }
             
             $this->mHeaders[] = "Location: " . $cScriptPath . "/DbgSmartyClean";
+            $this->mIsRedirecting = true;
             return;
         }
 

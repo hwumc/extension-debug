@@ -98,6 +98,7 @@ class PageDatabaseReports extends PageBase
 			
 			global $cScriptPath;
 			$this->mHeaders[] = ( "Location: " . $cScriptPath . "/DatabaseReports" );
+            $this->mIsRedirecting = true;
 		} else {
 			$rightnames= array();
             foreach (Right::getAllRegisteredRights(true) as $v)
@@ -127,8 +128,7 @@ class PageDatabaseReports extends PageBase
 			
 			global $cScriptPath;
 			$this->mHeaders[] =  "Location: " . $cScriptPath . "/DatabaseReports";
-			
-			
+            $this->mIsRedirecting = true;
 		} else {
 			$this->mBasePage = "dbreports/delete.tpl";
 		}
@@ -146,6 +146,7 @@ class PageDatabaseReports extends PageBase
             
 			global $cScriptPath;
 			$this->mHeaders[] =  "Location: " . $cScriptPath . "/DatabaseReports";
+            $this->mIsRedirecting = true;
 		} else {
 			$rightnames= array();
             foreach (Right::getAllRegisteredRights(true) as $v)

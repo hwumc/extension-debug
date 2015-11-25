@@ -32,6 +32,7 @@
     </Compile>
     <Compile Include="DebugExtension.php" />
     <Compile Include="DebugExtensionHooks.php" />
+    <Compile Include="Page\PageDbgResetPassword.php" />
     <Compile Include="Page\PageDbgSmartyClean.php" />
     <Compile Include="Page\PageDbgTriggerSessionError.php" />
     <Compile Include="Page\PageErrorLogViewer.php">
@@ -59,6 +60,7 @@
     <Folder Include="Page" />
     <Folder Include="Templates\dbreports" />
     <Folder Include="Templates\diagnostics" />
+    <Folder Include="Templates\webmaster\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Templates\dbreports\disabled.tpl">
@@ -80,5 +82,13 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Templates\diagnostics\smartyclean.tpl" />
+    <Content Include="Templates\webmaster\resetpw.tpl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\siteframework\siteframework.phpproj">
+      <Name>siteframework</Name>
+      <Project>{1d936447-5486-4e58-a682-1822c130bcfa}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
 </Project>

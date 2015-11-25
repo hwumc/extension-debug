@@ -41,14 +41,28 @@ class DebugExtensionHooks
         
         if( $currentUser->isAllowed("diagnostic-sudo") )
         {   
-            if( !isset($menu['debugging']['sudo']) )
+            if( !isset($menu['debugging']['strangerdanger']) )
             {
-                $menu['debugging']['sudo'] = array();
+                $menu['debugging']['strangerdanger'] = array();
             }
             
-            $menu['debugging']['sudo']['sudo'] = array(
+            $menu['debugging']['strangerdanger']['sudo'] = array(
                 "displayname" => "page-dbgsudo",
                 "link" => $cScriptPath . "/DbgSudo",
+                "icon" => "icon-warning-sign"
+                );
+        }
+
+        if( $currentUser->isAllowed("diagnostic-resetpassword") )
+        {   
+            if( !isset($menu['debugging']['strangerdanger']) )
+            {
+                $menu['debugging']['strangerdanger'] = array();
+            }
+            
+            $menu['debugging']['strangerdanger']['resetpassword'] = array(
+                "displayname" => "page-dbgresetpassword",
+                "link" => $cScriptPath . "/DbgResetPassword",
                 "icon" => "icon-warning-sign"
                 );
         }

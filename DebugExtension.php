@@ -8,7 +8,7 @@ class DebugExtension extends Extension
 	{
 		return array(
 			"name" => "Debugging Tools",
-			"gitviewer" => "https://gerrit.stwalkerster.co.uk/gitweb?p=siteframework/extensions/debug.git;a=tree;h=",
+			"gitviewer" => "https://phabricator.stwalkerster.co.uk/rSFD",
 			"description" => "Debugging utilities for siteframework",
 			"filepath" => dirname(__FILE__),
 		);
